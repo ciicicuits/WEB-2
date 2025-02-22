@@ -1,0 +1,32 @@
+1. Jelaskan apa yang dimaksud dengan dokumen root ?
+   Dokumen root adalah dokumen utama dalam sebuah sistem/stuktur direktori yang fungsinya sebagai titik awal untuk menyusun file/dokumen (menyimpan)
+
+2. Pada apache web server, apakah dokumen root harus terletak dalam direktori
+C:\xampp\htdocs ? Jelaskan jawaban anda
+    Tidak harus C:\xampp\htdocs, karena direktori tersebut hanya sebagai contoh saja dan kita bisa memodifikasinya menggunakan lokasi lain sesuai sama kebutuhan kita  
+
+3. Jelaskan apa yang dimaksud dengan perintah git : init, clone, remote, add, commit, push
+dan checkout?
+    - git init : digunakan untuk membuat repository baru
+    - git clone : digunakan untuk menyalin repository yang sudah ada
+    - git remote : digunakan untuk menghubungkan repository lokal dengan repository remote
+    - git add : digunakan untuk menambahkan file ke dalam repository
+    - git commit : digunakan untuk mencatat/menyimpan perubahan pada repository
+    - git push : digunakan untuk mengirimkan perubahan ke repository remote
+    - git checkout : digunakan untuk mengganti branch yang sedang digunakan/mengembalikan file yang udah di ubah menjadi seperti semula
+
+4. Jelaskan perbedaan antara GitHub dan GitLab?
+    - GitHub dan GitLab adalah platform yang digunakan untuk menyimpan file kode dan mengelola 
+Github : Dimiliki oleh Microsoft , Gitlab : Perusahaan Independen
+    - GitHub lebih populer dan banyak digunakan dibandingkan dengan GitLab
+    - Github lebih cocok untuk proyek open source & antarmuka yang lebih sederhana dibandingkan Gitlab yang lebih kompleks dan cocok untuk proyek besar dan kompleks karena lebih lengkap fitur CI/CD nya
+
+5. Apa bedanya variable user dengan variable system ?
+    - Variable User : digunakan untuk menyimpan data yang spesifik untuk pengguna tertentu
+    - Variable System : digunakan untuk menyimpan data yang bersifat global buat seluruh sistem dan penggunanya
+
+6. Apa persamaan variable system dengan variable constant ?
+- variable system dan variable constant sama sama menyimpan nilai yang tetap untuk pengaturan sistem variabel / untuk memastikan kode yang konsisten dalam variabel konstanta
+
+
+
