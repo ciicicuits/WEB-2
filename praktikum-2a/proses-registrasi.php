@@ -1,0 +1,72 @@
+<?php
+
+// Pastikan file ada sebelum memuatnya
+if (!file_exists('data-form-regis.php')) {
+    die("Error: File data-form-regis.php tidak ditemukan!");
+}
+require_once 'data-form-regis.php';
+
+// Mengambil data dari form
+$nim = $_POST['nim'] ?? '';
+$nama = $_POST['nama_lengkap'] ?? '';
+$jk = $_POST['jenis_kelamin'] ?? '';
+$prodi = $_POST['program_studi'] ?? '';
+$skill_pilihan = $_POST['skills'] ?? [];
+$email = $_POST['email'] ?? '';
+$domisili = $_POST['domisili'] ?? '';
+
+// Pastikan $ar_skill tersedia
+$ar_skill = [
+    "HTML" => 10,
+    "CSS" => 10,
+    "JavaScript" => 20,
+    "PHP" => 30,
+    "Python" => 30,
+    "Java" => 50,
+    "C++" => 50
+];
+
+// Hitung skor skill
+$skor_skill = skor_skill($skill_pilihan, $ar_skill);
+$kategori_skill = kategori_skill($skor_skill);
+
+function skor_skill($skill_pilihan, $ar_skill) {
+    $skor = 0;
+    
+    if (!empty($skill_pilihan)) { // Pastikan tidak kosong
+        foreach ($skill_pilihan as $skill) {
+            if (isset($ar_skill[$skill])) {
+                $skor += $ar_skill[$skill];
+            }
+        }
+    }
+
+    return $skor;
+}
+
+
+function kategori_skill($skor_skill = 0){
+    switch ($skor_skill){
+     case 0:
+         return "Tidak Ada";
+         break;
+     case $skor_skill <= 40:
+         return "Kurang";
+         break;
+     case $skor_skill <= 60:
+         return "Cukup";
+         break;
+     case $skor_skill <= 100:
+         return "Baik";
+         break;
+     case $skor_skill <= 150:
+         return "Sangat Baik";
+         break;
+     default:
+        return "Tidak Terkategori";
+        break;
+     }
+
+}
+
+?>
