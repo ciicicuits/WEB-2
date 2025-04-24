@@ -17,4 +17,4 @@ class connection
         }
     }
 }
-return connection::make($host, $db, $user, $password);
+return Connection::make($host, $db, $user, $password);
